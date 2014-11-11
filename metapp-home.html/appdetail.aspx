@@ -93,6 +93,12 @@
         </div>
     </div>
 
+
+
+
+
+
+
 	<div data-role="page" id="int-dialog">
 		<div data-role="header">
           	    <h1> Internal Dialog Window </h1>
