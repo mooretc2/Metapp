@@ -2,4 +2,4 @@ metApp
 
 metApp is the latest web application from 201 Software Solutions! metApp is a database of applications from all
 app stores, making it easy to get the information that you need. With metApp, you can search, filter, sort, rate,
-and comment on all applications and even find where to purchase / download them with you are ready. 
+and comment on all applications and even find where to purchase / download them when you are ready. 
