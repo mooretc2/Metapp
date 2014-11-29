@@ -8,7 +8,6 @@ Partial Class ApplicationAdd
     
     Protected Sub AddApplicationButton_Click(sender As Object, e As System.EventArgs) Handles AddApplicationButton.Click
         Try
-            'SqlDataSource1.Insert()
             'insert a application record
             Dim name = ApplicationTextBox.Text
             Dim developer = DeveloperNameTextBox.Text
