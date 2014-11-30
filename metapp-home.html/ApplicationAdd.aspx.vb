@@ -15,6 +15,7 @@ Partial Class ApplicationAdd
             Dim OS = OSTextBox.Text
             Dim version = VersionNumTextBox.Text
             Dim price = PriceTextBox.Text
+            Dim external = ExternalURLTextBox.Text
 
             Dim conn As New SqlConnection
             Dim connstr As String
@@ -23,7 +24,7 @@ Partial Class ApplicationAdd
             conn.ConnectionString = connstr
 
             'Create the SQL Query
-            Dim query = "INSERT INTO metApp (Name,Developer,Description,Operating_System,Version,Price) VALUES('" + name + "','" + developer + "','" + description + "','" + OS + "','" + version + "','" + price + "')"
+            Dim query = "INSERT INTO metApp (Name,Developer,Description,Operating_System,Version,Price, External_URL) VALUES('" + name + "','" + developer + "','" + description + "','" + OS + "','" + version + "','" + price + "','" + external + "')"
 
             'Open the Connection and Add In Application
             conn.Open()
@@ -53,25 +54,11 @@ Partial Class ApplicationAdd
             .VersionNumTextBox.Text = ""
             .PriceTextBox.Text = ""
             .DescriptionTextBox.Text = ""
+            .ExternalURLTextBox.Text = ""
         End With
     End Sub
 
-    'Protected Sub Page_Load(sender As Object, e As System.EventArgs) Handles Me.Load
-    '    Dim conn As New SqlConnection
-    '    Dim connstr As String
-
-    '    connstr = WebConfigurationManager.ConnectionStrings("user_dataConnectionString").ConnectionString
-    '    conn.ConnectionString = connstr
-
-    '    Dim cmd As New SqlCommand("SELECT * FROM [metApp]", conn)
-
-    '    conn.Open()
-
-    '    Dim dataAdapter As New SqlDataAdapter(cmd)
-    '    Dim dataSet As New DataSet
-
-    '    dataAdapter.Fill(dataSet)
-    '    conn.Close()
-
-    'End Sub
+    Protected Sub backBtn_Click(sender As Object, e As System.EventArgs) Handles backBtn.Click
+        Response.Redirect("./Home.aspx")
+    End Sub
 End Class

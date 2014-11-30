@@ -30,11 +30,6 @@ Partial Class Home
         checkLogin()
     End Sub
 
-    Protected Sub GridView1_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles GridView1.RowDataBound
-        Dim btn As HyperLink = e.Row.FindControl("DetailsLink")
-        btn.NavigateUrl = "./appdetail.aspx"
-    End Sub
-
     Protected Sub checkLogin()
         Dim loggedIn As String = ""
         If Request.Cookies("logged_in") IsNot Nothing Then

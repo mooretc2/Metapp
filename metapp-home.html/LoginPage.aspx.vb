@@ -182,4 +182,7 @@ Partial Class LoginPage
         Return valid
     End Function
 
+    Protected Sub backBtn_Click(sender As Object, e As System.EventArgs) Handles backBtn.Click
+        Response.Redirect("./Home.aspx")
+    End Sub
 End Class
